@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Interactive Shopping List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- (Optional) minimal styles just to make it readable; not required -->
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; padding: 1rem; }
+    .controls { display: flex; gap: .5rem; margin-bottom: 1rem; }
+    #item-input { flex: 1; padding: .5rem; }
+    button { padding: .4rem .7rem; cursor: pointer; }
+    ul { list-style: none; padding-left: 0; }
+    li { display: flex; align-items: center; gap: .5rem; padding: .4rem 0; }
+    .item-text { flex: 1; }
+  </style>
+</head>
+<body>
+  <h1>Shopping List</h1>
+
+  <div class="controls" aria-label="Add a new shopping list item">
+    <input id="item-input" type="text" placeholder="e.g., eggs" aria-label="New item" />
+    <button id="add-btn" type="button">Add</button>
+  </div>
+
+  <ul id="list" aria-live="polite" aria-label="Shopping list"></ul>
+
+  <script src="./scripts/scripts.js" defer></script>
+</body>
+</html>
